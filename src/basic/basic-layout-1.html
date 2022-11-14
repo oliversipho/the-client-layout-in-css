@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="../style.css" />
     <style>
       /* Doe hier jouw ding! */
+      body {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 2fr 4fr 4fr 1fr;
+    grid-template-areas: 
+    'header header header header'
+    'nav main main main'
+    'nav main main main'
+    'footer footer footer footer';
+     min-height: 100vh;
+     grid-gap: 10px;
+}
+
+header {
+    grid-area: header;
+    background: cyan;
+}
+
+nav {
+    grid-area: nav;
+    background: magenta;
+}
+
+main {
+    grid-area: main;
+    background: yellow;
+}
+
+footer {
+    grid-area: footer;
+    background: black;
+}
     </style>
   </head>
   <body id="basic-layout-1">
