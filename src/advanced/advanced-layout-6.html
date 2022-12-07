@@ -8,36 +8,46 @@
     <style>
       /* Doe hier jouw ding! */
       body {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 2fr 6fr 3fr;
-        grid-template-rows: 3fr 8fr;
-        grid-template-areas:
-        'header header footer'
-        'nav main footer';
-      }
+      margin: 0 auto;
+      max-width: 25em;
+      gap: 5px;
+      display: grid;
+      grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
 
+    header {
+      grid-area: header;
+      grid-column: 5/7;
+      grid-row: 2/5;
+      z-index: 2;
+    }
 
+    nav {
+      grid-area: nav;
+      grid-column: 2/4;
+      grid-row: 3/6;
+      z-index: 2;
+    }
 
+    main {
+      grid-area: main;
+      grid-column: 1/8;
+      grid-row: 1/6;
+      z-index: 1;
+    }
 
-
-
-
-      main {
-        grid-area: main;
-      }
-
-      header {
-        grid-area: header;
-      }
-
-      footer {
-        grid-area: footer;
-      }
-
-      nav {
-        grid-area: nav;
-      }
+    footer {
+      grid-area: footer;
+      grid-column: 1/8;
+      grid-row: 4/8;
+      z-index: 1;
+    }
     </style>
   </head>
   <body id="advanced-layout-6">

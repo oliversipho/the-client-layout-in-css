@@ -8,31 +8,43 @@
     <style>
       /* Doe hier jouw ding! */
       body {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 7fr 3fr;
-        grid-template-rows: 5fr 5fr;
-        grid-template-areas: 
-        'main header'
-        'footer nav';
-      }
+      margin: 0 auto;
+      display: grid;
+      gap: 10px;
+      max-width:25em;
+      grid-template-areas:
+        "nav header"
+        "main footer";
+      grid-template-rows:1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
 
-      main {
-        grid-area: main;
-      }
+    header {
+      grid-area: header;
+      transform-origin: left;
+      transform: skewy(-10deg);
+      
+    }
 
-      header {
-        grid-area: header;
-      }
+    nav {
+      grid-area: nav;
+      transform-origin: right;
+      transform: skewy(-10deg);
 
-      footer {
-        grid-area: footer;
-      }
 
-      nav {
-        grid-area: nav;
-      }
+    }
 
+    main {
+      grid-area: main;
+      transform: skewy(-10deg);
+      transform-origin: 100%;
+    }
+
+    footer {
+      grid-area: footer;
+      transform: skewy(-10deg);
+      transform-origin: 1%;
+    }
 
     </style>
   </head>
