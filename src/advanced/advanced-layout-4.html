@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="../style.css" />
     <style>
       /* Doe hier jouw ding! */
+      body {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 7fr 3fr;
+        grid-template-rows: 5fr 5fr;
+        grid-template-areas: 
+        'main header'
+        'footer nav';
+      }
+
+      main {
+        grid-area: main;
+      }
+
+      header {
+        grid-area: header;
+      }
+
+      footer {
+        grid-area: footer;
+      }
+
+      nav {
+        grid-area: nav;
+      }
+
+
     </style>
   </head>
   <body id="advanced-layout-4">
